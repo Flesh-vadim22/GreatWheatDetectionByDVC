@@ -1,0 +1,43 @@
+
+base:
+  random_state: 42
+  log_level: INFO
+  n_seed: 0
+  num_classes: 2
+  device:
+    GPU: 'cuda:0'
+    CPU: 'cpu'
+
+
+
+data_load:
+  data_path: 'data'
+  raw_data_path: 'data/raw/'
+  processed_data : 'data/processed/'
+  train_path_data : 'data/raw/train'
+  train_test_data : 'data/raw/test'
+
+featurize:
+  features_path: 'data/processed/featured_iris.csv'
+  target_column: target
+
+
+data_split:
+  test_size: 0.2
+  trainset_path: 'data/processed/train.csv'
+  validset_path: 'data/processed/valid.csv'
+  testset_path: 'data/processed/test.csv'
+  train_batch_size: 12
+  valid_batch_size: 6
+
+
+train:
+  num_epochs: 15
+  num_model: 1
+  model_path: 'models/'
+
+
+evaluate:
+  reports_dir: reports
+  metrics_file: 'metrics.json'
+  confusion_matrix_image: 'confusion_matrix.png'
