@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  data_load:
+    cmd: python src/data/get_data.py --config=params.yaml
+    deps:
+    - path: src/data/get_data.py
+      md5: 55af31a5c6d51c5d84cdcf9059419bc4
+      size: 695
+    params:
+      params.yaml:
+        base:
+          random_state: 42
+          log_level: INFO
+          n_seed: 0
+          num_classes: 2
+          device:
+            GPU: cuda:0
+            CPU: cpu
+        data_load:
+          data_path: data
+          raw_data_path: data/raw/
+          processed_data: data/processed/
+          train_path_data: data/raw/train
+          train_test_data: data/raw/test

@@ -3,10 +3,6 @@ import re
 import pandas as pd
 
 
-def get_df(path) -> pd.DataFrame:
-    return pd.read_csv(path)
-
-
 def convert_df(df) -> pd.DataFrame:
     df['x'] = -1
     df['y'] = -1

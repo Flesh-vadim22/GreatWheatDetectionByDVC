@@ -13,9 +13,6 @@ base:
 data_load:
   data_path: 'data'
   raw_data_path: 'data/raw/'
-  processed_data : 'data/processed/'
-  train_path_data : 'data/raw/train'
-  train_test_data : 'data/raw/test'
 
 featurize:
   features_path: 'data/processed/featured_iris.csv'
@@ -24,6 +21,9 @@ featurize:
 
 data_split:
   test_size: 0.2
+  processed_data : 'data/processed/'
+  train_path_data: 'data/processed/train'
+  test_path_data: 'data/processed/test'
   trainset_path: 'data/processed/train.csv'
   validset_path: 'data/processed/valid.csv'
   testset_path: 'data/processed/test.csv'
