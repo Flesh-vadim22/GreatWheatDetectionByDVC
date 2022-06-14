@@ -13,6 +13,7 @@ stages:
     deps:
       - src/data/preprocessing.py
     params:
+      - base
       - data_split
     outs:
       - data/processed/valid.csv
