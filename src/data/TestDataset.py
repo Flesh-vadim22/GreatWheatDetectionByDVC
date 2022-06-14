@@ -13,7 +13,6 @@ class DatasetWheatTest(Dataset):
         self.dir_imgs = dir_imgs
         self.transforms = transforms
 
-
     def __getitem__(self, idx):
 
         image_id = self.imgs_id[idx]
@@ -21,7 +20,7 @@ class DatasetWheatTest(Dataset):
 
         image = cv2.imread(f"{self.dir_imgs}/{image_id}.jpg")
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB).astype(np.float32)
-        image/=255.0
+        image /= 255.0
 
         if self.transforms is not None:
             sample = {

@@ -25,6 +25,7 @@ data_split:
   train_path_data: 'data/processed/train'
   test_path_data: 'data/processed/test'
   trainset_path: 'data/processed/train.csv'
+  new_trainset_path: 'data/processed/new_train.csv'
   validset_path: 'data/processed/valid.csv'
   testset_path: 'data/processed/test.csv'
   train_batch_size: 12

@@ -1,9 +1,7 @@
 import argparse
-import os
 from typing import Text
 import yaml
 import pandas as pd
-# from src.utils.logs import get_logger
 
 
 def data_load(config_path: Text) -> None:
@@ -16,7 +14,6 @@ def data_load(config_path: Text) -> None:
         config = yaml.safe_load(conf_file)
 
     data = pd.read_csv(config['data_split']['trainset_path'])
-    # print(os.getcwd())
     print("complete!")
 
 

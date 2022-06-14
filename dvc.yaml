@@ -8,3 +8,12 @@ stages:
     - data_load
    # outs:
   # - data/processed/train.csv
+  data_split:
+    cmd: python src/data/preprocessing.py --config=params.yaml
+    deps:
+      - src/data/preprocessing.py
+    params:
+      - data_split
+    outs:
+      - data/processed/valid.csv
+      - data/processed/new_train.csv
