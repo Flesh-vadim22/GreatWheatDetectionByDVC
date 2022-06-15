@@ -4,7 +4,7 @@ from torch.utils.data import Dataset
 import numpy as np
 
 
-class DatasetWheatTrain(Dataset):
+class TrainDataset(Dataset):
 
     def __init__(self, data_frame, dir_imgs, transforms=None):
         super(Dataset).__init__()

@@ -18,3 +18,19 @@ stages:
     outs:
       - data/processed/valid.csv
       - data/processed/new_train.csv
+  train:
+    cmd: python src/train/Model_train.py --config=params.yaml
+    deps:
+      - src/train/Model_train.py
+    params:
+      - base
+      - train
+  evaluate:
+    cmd: python src/eval/evaluate_model.py --config=params.yaml
+    deps:
+      - src/eval/evaluate_model.py
+    params:
+      - base
+      - data_split
+      - train
+      - evaluate

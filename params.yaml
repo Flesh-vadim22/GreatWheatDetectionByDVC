@@ -35,7 +35,7 @@ data_split:
 train:
   num_epochs: 15
   num_model: 1
-  model_path: 'models/'
+  model_path: 'model/'
 
 
 evaluate:
